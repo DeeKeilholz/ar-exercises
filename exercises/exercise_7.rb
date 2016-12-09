@@ -9,4 +9,12 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
-# Your code goes here ...
+### Exercise 7: Validations for both models
+
+puts "Enter a store name:"
+
+store_name = gets.chomp
+new_store = Store.create(name: store_name)
+
+puts new_store.errors.messages
+# {:annual_revenue=>["can't be blank", "is not a number"]}
